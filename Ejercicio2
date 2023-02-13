@@ -1,0 +1,33 @@
+void main() {
+  saludar();
+  saludarConNombre('Gustavo');
+  saludarNombreOpcional('Luis');
+  saludarNombreOpcionalNumControl(17540337, 'Gustavo');
+  datosAlumnos(numControl:175403878);
+  datosAlumnos(numControl:175403878, nombre:'Sam', apellidos:'Houston');
+}
+
+void saludar(){
+  print('Hola');
+}
+
+void saludarConNombre(String nombre){
+  print('Hola $nombre');
+}
+
+void saludarNombreOpcional([String nombre='']){
+  print('Hola $nombre');
+}
+
+void saludarNombreOpcionalNumControl(int numControl,[String nombre='']){
+  print('Hola $numControl $nombre');
+}
+
+// Argumentos no pocisionales
+void datosAlumnos({
+  required int numControl,
+  String nombre='Sin nombre',
+  String apellidos='Sin apellidos'
+}){
+  print('$numControl $nombre $apellidos');
+}
